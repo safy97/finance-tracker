@@ -1,0 +1,7 @@
+<%if !@stock.nil? %>
+<div class="well results-block">
+  <%= @stock.ticker %>
+  <%=@stock.name%>
+  <%=@stock.last_price%>
+</div>
+<% end %>
