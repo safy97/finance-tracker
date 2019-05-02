@@ -1,7 +1,5 @@
 class FriendshipsController < ApplicationController
   def destroy
-    puts "->>>>>>>>>>>>>>>>>>>>>>"
-    puts params[:friend]
     @friendship = current_user.friendships.where(friend_id: params[:id]).first
     @username = @friendship.friend.full_name
     @friendship.destroy
